@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #333; /* Dark grey container background */
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border-top: 5px solid #4caf50;
+    display: flex; /* Make container flexbox */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: sticky; /* Fix header */
+    top: 0; /* Top of viewport */
+    background-color: #333; /* Background color for header */
+    z-index: 100; /* Ensure it's above other content */
+    padding: 10px 0; /* Adjust padding as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.name {
+    font-size: 2em;
+    color: #4caf50;
+    margin: 0;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation a {
+    margin-right: 20px;
+    color: #fff; /* White text for navigation links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #4caf50;
+}
+
+.photo-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0; /* Prevents photo container from shrinking */
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.message {
+    text-align: left; /* Align text to left */
+    margin-left: 20px; /* Adjust margin as needed */
+    padding-left: 20px;
+    border-left: 2px solid #4caf50; /* Vertical line */
+    flex-grow: 1; /* Allows message to expand */
+    margin-bottom: 30px; /* Spacing after message */
+}
+
+.section {
+    margin-bottom: 30px; /* Spacing between sections */
+    text-align: left; /* Align text to left */
+    opacity: 0; /* Initially hide sections */
+    transition: opacity 1s ease; /* Smooth transition for opacity */
+}
+
+.section.active {
+    opacity: 1; /* Display active section */
+}
+
+.section h2 {
+    color: #4caf50; /* Section header color */
+    border-bottom: 2px solid #4caf50; /* Section header underline */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    margin-bottom: 5px;
+    color: #4caf50;
+}
+
+.experience-item p {
+    margin: 5px 0;
+}
+
+.button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
