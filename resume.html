@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASANK DEVARAKONDA - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #333; /* Dark grey container background */
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border-top: 5px solid #4caf50;
+            display: flex; /* Make container flexbox */
+            flex-direction: column; /* Align items vertically */
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center text */
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            position: sticky; /* Fix header */
+            top: 0; /* Top of viewport */
+            background-color: #333; /* Background color for header */
+            z-index: 100; /* Ensure it's above other content */
+            padding: 10px 0; /* Adjust padding as needed */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+        }
+        .name {
+            font-size: 2em;
+            color: #4caf50;
+            margin: 0;
+        }
+        .navigation {
+            display: flex;
+        }
+        .navigation a {
+            margin-right: 20px;
+            color: #fff; /* White text for navigation links */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .navigation a:hover {
+            color: #4caf50;
+        }
+        .photo-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0; /* Prevents photo container from shrinking */
+            margin-top: 20px; /* Adjust margin as needed */
+        }
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .message {
+            text-align: left; /* Align text to left */
+            margin-left: 20px; /* Adjust margin as needed */
+            padding-left: 20px;
+            border-left: 2px solid #4caf50; /* Vertical line */
+            flex-grow: 1; /* Allows message to expand */
+            margin-bottom: 30px; /* Spacing after message */
+        }
+        .section {
+            margin-bottom: 30px; /* Spacing between sections */
+            text-align: left; /* Align text to left */
+            opacity: 0; /* Initially hide sections */
+            transition: opacity 1s ease; /* Smooth transition for opacity */
+        }
+        .section.active {
+            opacity: 1; /* Display active section */
+        }
+        .section h2 {
+            color: #4caf50; /* Section header color */
+            border-bottom: 2px solid #4caf50; /* Section header underline */
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        .experience-item h3 {
+            margin-bottom: 5px;
+            color: #4caf50;
+        }
+        .experience-item p {
+            margin: 5px 0;
+        }
+        .button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="name">SASANK</h1>
+            <div class="navigation">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+                <a href="#resume">Resume</a>
+            </div>
+        </div>
+
+        <div class="photo-container">
+            <img class="photo" src="C:\Users\SASANK\Desktop\Photos\image.jpg" alt="Sasank's Photo">
+        </div>
+
+        <div class="message">
+            <p>Hi, I am Sasank, Web Developer</p>
+        </div>
+
+        <div id="about" class="section">
+            <h2>About Me</h2>
+            <p>I'm a passionate Software Developer building user-friendly and interactive Websites. I am currently pursuing a Master's degree in Computer Science from the University of Parul.</p>
+            <p>As a developer, my expertise spans various technologies for coding and problem-solving. I have dedicated myself to mastering various programming languages and frameworks, constantly exploring new advancements in the field, and staying up-to-date with the latest trends.</p>
+            <p>In addition to my technical skills, I have excellent communication skills. I perform best in fast-paced settings where I can use my analytical skills and creativity to solve difficult problems. My attention to detail and commitment to quality help me deliver high-quality code and ensure a smooth user experience.</p>
+            <p>I'm open to job opportunities where I can contribute, learn, and grow. If you have a good opportunity that matches my skills and experience, then don't hesitate to contact me.</p>
+            <p><a class="button" href="#contact" onclick="showSection('contact')">Contact Me</a></p>
+        </div>
+
+        <div id="education" class="section">
+            <h2>Education</h2>
+            <div class="experience-item">
+                <h3>University Of Parul</h3>
+                <p><strong>August 2021 - May 2023</strong></p>
+                <ul>
+                    <li>Masters in Computer Applications (MCA) with a specialization in Cloud Computing - Gujarat</li>
+                    <li>Achieved an 80% aggregate in the program.</li>
+                    <li>Completed a project titled "Hospital Management Cloud System," which involved developing a comprehensive cloud-based solution for managing hospital operations efficiently.</li>
+                    <li>Found good communication and teaching skills among the teachers, which greatly enhanced the learning experience.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Krishna University</h3>
+                <p><strong>June 2018 - July 2021</strong></p>
+                <ul>
+                    <li>Bachelor of Science (BSc)</li>
+                    <li>Achieved an 87% aggregate in the program.</li>
+                    <li>Found good communication and teaching skills among the teachers, which greatly enhanced the learning experience.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>GSR&KSR Junior Colloge</h3>
+                <p><strong>June 2016 - March 2018</strong></p>
+                <ul>
+                    <li>Group: MPC (Mathematics, Physics, Chemistry)</li>
+                    <li>Achieved an 70% aggregate in the program.</li>
+                    <li>Excelled in Mathematics, demonstrating strong analytical and problem-solving skills.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="work-experience-item">
+                <h3>Neoteric Method</h3>
+                <p><strong>October 2023 - April 2024</strong></p>
+                <ul>
+                    <li>Location: Hyderabad</li>
+                    <li>Completed a 6-month Full Stack Development internship.</li>
+                    <li>Specialized in Java, developing strong skills in both front-end and back-end technologies.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Feel free to email or call me:</p>
+                <p><strong>Email:</strong> sasankdevarakonda002@gmail.com</p>
+                <p><strong>Phone:</strong> +91 6302142514</p>
+            </div>
+        </div>
+
+        <div id="resume" class="section">
+            <h2>Resume</h2>
+            <p>If you'd like to download my resume, click the button below:</p>
+            <a class="button" href="C:\Users\SASANK\Desktop\Sasank_Resume.pdf" target="_blank" download>Download Resume</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to show a specific section
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the target section
+            const targetElement = document.getElementById(sectionId);
+            if (targetElement) {
+                targetElement.classList.add('active');
+            }
+        }
+
+        // Function to check if an element is in view
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scrolling and show sections
+        function handleScroll() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (isInViewport(section)) {
+                    section.classList.add('active');
+                }
+            });
+        }
+
+        // Event listener for scroll
+        window.addEventListener('scroll', handleScroll);
+
+        // Initially show the About section
+        document.getElementById('about').classList.add('active');
+    </script>
+</body>
+</html>
