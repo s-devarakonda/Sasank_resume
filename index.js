@@ -12,13 +12,34 @@ function showSection(sectionId) {
     }
 }
 
-// Function to check if an element is in view
+
+function typeMessage(element, message, delay = 50) {
+    let i = 0;
+    function type() {
+        if (i < message.length) {
+            element.textContent += message.charAt(i);
+            i++;
+            setTimeout(type, delay);
+        }
+    }
+    type();
+}
+
+// Start typing the message when the page loads
+window.addEventListener('DOMContentLoaded', (event) => {
+    const typedMessageElement = document.getElementById('typed-message');
+    const message = "Hi, I am Sasank, Java FullStack Developer";
+    typeMessage(typedMessageElement, message);
+});
+
+// Function to check if an element is partially in view
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
+    const partialVisibilityThreshold = 0.2; // Adjust this threshold (0.0 - 1.0) for desired partial visibility
     return (
-        rect.top >= 0 &&
+        rect.top < (window.innerHeight || document.documentElement.clientHeight) * (1 - partialVisibilityThreshold) &&
+        rect.bottom > (window.innerHeight || document.documentElement.clientHeight) * partialVisibilityThreshold &&
         rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
